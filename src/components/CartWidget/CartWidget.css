@@ -1,0 +1,22 @@
+
+.cartIconContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: #666;
+    border-radius: 10px;
+    align-items: center
+    
+}
+.cartIconContainer p{
+    color: white;
+    padding-right: 5px;
+}
+
+
+.cartIcon{
+    padding: 5px;
+    height: 50px;
+    
+    
+
+}
