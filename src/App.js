@@ -15,11 +15,14 @@ function App() {
 
       <div className="main-container">
           
-    
-    
     <ItemListContainer title="Productos en oferta"/>
     <ItemListContainer title="Productos de Temporada"/>
-    </div>  
+    </div> 
+
+    <footer>
+      <p className="footer">Dirkans Impresiones 3D®</p>
+    </footer>
+
     
     </div>
   );
