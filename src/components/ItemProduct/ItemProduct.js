@@ -1,30 +1,25 @@
 import './ItemProduct.css';
-import {useState} from 'react';
+
+import ItemCount from '../ItemCount/ItemCount';
+
 
 function ItemProduct ({data,action}){
-    const [counter,setCounter] = useState(1);
-    const {title,image,price} = data;
 
-    const addNumber = () => {
-        setCounter(counter + 1)
-    }
-    
-    const minusNumber = () => {
-        setCounter(counter - 1)
-    }
+        const {title,image,price,stock} = data;
+
+
+
+
 
     return(
         <div className="item-product">
             <img src={`/assets/${image}`} alt="ProductImage"></img>
             <p>{title}</p>
-            <span>$ {price}</span>
-            <div className='countProd'>
-                <button onClick={minusNumber}>-</button>
-                <p>{counter}</p>
-                <button onClick={addNumber}>+</button>
-            </div>
-            
-            <button onClick={action} className="buttonBuy">Comprar</button>
+            <p>{price}</p>
+    
+            <ItemCount title={title} stock={stock} initial="1"/>
+                
+
         </div>
 
 

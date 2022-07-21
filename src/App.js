@@ -23,7 +23,7 @@ function App() {
       <p className="footer">Dirkans Impresiones 3D®</p>
     </footer>
 
-    
+  
     </div>
   );
 }

@@ -1,0 +1,27 @@
+.countProd {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.countProd p{
+    font-size: 22px;
+}
+
+.countProd button{
+    padding: 6px;
+    font-size: 23px;
+    margin: 5px;
+}
+
+.buttonBuy{
+    border: solid 1px #333;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 40%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    }
+    
+    

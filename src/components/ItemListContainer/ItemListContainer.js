@@ -1,5 +1,7 @@
 import ItemProduct from "../ItemProduct/ItemProduct";
 
+
+
 const ItemListContainer = (props) => {
         const product1 = {
                 title: 'Ender 3 v2',
@@ -19,7 +21,10 @@ const ItemListContainer = (props) => {
                 image: 'magna.webp',
                 stock: 7
         };
-return (
+
+
+
+        return (
 
 
 <div className="list-products">
