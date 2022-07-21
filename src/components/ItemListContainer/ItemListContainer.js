@@ -1,12 +1,29 @@
 import ItemProduct from "../ItemProduct/ItemProduct";
 
 const ItemListContainer = (props) => {
+        const product1 = {
+                title: 'Ender 3 v2',
+                image: 'ender3v2.png',
+                price: 84999
+        };
+        const product2 = {
+                title: 'Ender 3',
+                price: 65200,
+                image: 'ender3.png'
+        };
+        const product3 = {
+                title: 'Hellbot Magna 2',
+                price: 65200,
+                image: 'magna.webp'
+        };
 return (
+
+
 <div className="list-products">
         <h2>{props.title}</h2>
-        <ItemProduct title='Ender 3 v2' price={84999} image="ender3v2.png" />
-        <ItemProduct title='Ender 3' price={65200} image="ender3.png"/>
-        <ItemProduct title='Hellbot Magna 2' price={81399} image="magna.webp" />
+        <ItemProduct data={product1} />
+        <ItemProduct data={product2}/>
+        <ItemProduct data={product3}/>
 </div>
 
 
