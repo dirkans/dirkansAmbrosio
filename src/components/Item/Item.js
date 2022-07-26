@@ -10,14 +10,14 @@ function Item ({data,action}){
             
             title: `${title}!`,
             text: `${info}`,
-            imageUrl: `/assets/${image}`,
+            imageUrl: `./assets/${image}`,
             imageHeight: 400,
             imageAlt: `${title}!`
         })}
 
         return(
         <div className="item-product">
-            <img src={`/assets/${image}`} alt="ProductImage"></img>
+            <img src={`./assets/${image}`} alt="ProductImage"></img>
             <p>{title}</p>
             <p>{price}</p>
             <p>Stock disponible: {stock}</p>
