@@ -15,15 +15,17 @@
 .item-product img{
     width: 220px;
     height: 220px;
+    
         
 }
 
-.buttonBuy{
-border: solid 1px #333;
-border-radius: 15px;
-margin: 0 auto;
-width: 40%;
-margin-bottom: 15px;
-margin-top: 10px;
-}
-
+.buttonMore{
+    border: solid 1px #333;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 40%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    
+    }
+    
