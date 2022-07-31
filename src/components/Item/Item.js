@@ -11,7 +11,7 @@ function Item ({data,action}){
         
         const verMas = () => {
 
-console.log("chupala")
+
         
         }
 
@@ -25,7 +25,8 @@ console.log("chupala")
             <p>{price}</p>
             <p>Stock disponible: {stock}</p>
             <ItemCount title={title} stock={stock} initial="1"/>
-            <button onClick={verMas} className="buttonMore">Ver Más</button>
+            <Link to={`/Detail/${id}`}><button className="buttonMore">Ver Más</button></Link>
+            
             
 
 

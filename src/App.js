@@ -8,6 +8,8 @@ import Detail from './pages/Detail';
 import Contact from './pages/contact';
 import Accesories from './pages/accesories';
 import Filaments from './pages/filaments'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Cart from './pages/Cart';
 
 function App() {
   fetch('https://jsonplaceholder.typicode.com/users')
@@ -28,9 +30,11 @@ function App() {
     <Route path="/products" element={<Products/>}/>
     <Route path="/products" element={<Products/>}/>
     <Route path="/contact" element={<Contact/>}/>
+    <Route path="/Detail/:quierId" element={<ItemDetailContainer/>}/>
+    <Route path="/cart" element={<Cart/>}/>
 
 
-    <Route path="/products/:id" element={<Detail></Detail>}></Route>
+    
 
 </Routes>
 
