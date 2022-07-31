@@ -11,3 +11,17 @@
     
 
 }
+
+ .link{
+    color: #FFFFFF8C !important;
+    text-decoration: none !important;
+}
+
+.link:hover{
+    color:white !important;
+}
+
+.link-down {
+color: #212529 !important;
+text-decoration: none !important;
+}

@@ -4,6 +4,7 @@ import ItemList from "../ItemList/ItemList";
 
 
 const ItemListContainer = (props) => {
+        const [isLoading,setLoading] = useState(true);
         const [listProducts,setListProducts] = useState([]);
         const getProducts = new Promise((resolve,reject)=>{
                 setTimeout(()=>{resolve(products)},2000)})
@@ -11,16 +12,22 @@ const ItemListContainer = (props) => {
                         getProducts
                         .then((res)=>{
                                 setListProducts(res)
+                                setLoading(false        )
+
                         }).catch((error)=>{
                                 console.log("La importacion de productos falló")
                         }).finally(()=>{console.log("process ok")})    
                 },[])
 
+                if(isLoading){
+                        return <div>Cargando... Porfavor espere.</div>
+                }
+
+
         return (
 
 <div className="list-products">
-        <h2>{props.title}</h2>
-        <ItemList dataProducts={listProducts}/>
+      <ItemList dataProducts={listProducts}/>
 </div>
 
 )}

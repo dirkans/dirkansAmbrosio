@@ -2,18 +2,21 @@ import './Item.css';
 import ItemCount from '../ItemCount/ItemCount';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import ItemDetail from '../ItemDetail/ItemDetail';
+import {Link} from 'react-router-dom';
 
 
 function Item ({data,action}){
-        const {title,image,price,stock,info} = data;
-        const verMas = () => {Swal.fire({
-            
-            title: `${title}!`,
-            text: `${info}`,
-            imageUrl: `./assets/${image}`,
-            imageHeight: 400,
-            imageAlt: `${title}!`
-        })}
+        const {title,image,price,stock,info,id} = data;
+        
+        const verMas = () => {
+
+console.log("chupala")
+        
+        }
+
+        
+
 
         return(
         <div className="item-product">
@@ -23,6 +26,9 @@ function Item ({data,action}){
             <p>Stock disponible: {stock}</p>
             <ItemCount title={title} stock={stock} initial="1"/>
             <button onClick={verMas} className="buttonMore">Ver Más</button>
+            
+
+
         </div>
         )
 }
