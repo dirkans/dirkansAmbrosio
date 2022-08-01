@@ -1,8 +1,6 @@
 .item-product{
     float: left;
-    width: 30%;
-    
-    box-shadow: 1px 1px 5px #afafaf47;
+    box-shadow: 1px 1px 6px #afafaf47;
     border: 10px;
     display: flex;
     flex-direction: column;
@@ -10,6 +8,7 @@
     text-align: center;
     margin-right: 10px;
     margin-bottom: 20px;
+    color: black;
 }
 
 .item-product img{
@@ -29,3 +28,4 @@
     
     }
     
+

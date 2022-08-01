@@ -1,23 +1,24 @@
 import '../ItemCount/ItemCount.css';
 import {Link} from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
+import './ItemDetail.css'
 
-{/* LLAMADO A ESTE COMPONENTE: <ItemDetail data={data}/>   */}
 
-const ItemDetail = ({data}) => {
-    const {title,image,price,stock,info,id} = data;
+var ItemDetail = ({data}) => {
+    const {title,image,price,stock,info,colors} = data;
+return(
 
-    return(
-<>
-            <h1>{title}</h1>
-            <img src={`../assets/${image}`} alt="ProductImage"></img>
-            <p>{info}</p>
-            <p>{price}</p>
-            <p>Stock disponible: {stock}</p>
+    <div className="detailedCont">
+        
+            <h2 className="h2Detail">{title}</h2>
+            <img className="detailImg"src={`../assets/${image}`} alt="ProductImage"></img>
+            <p className="info">{info}</p>
+            <p className="price">$ {price}</p>
+            <p className="stock">Stock disponible: {stock} unidades.</p>
             <ItemCount title={title} stock={stock} initial="1"/>
             <Link to="/cart"><button className="button">Finalizar Compra</button></Link>
-            
+            </div> 
 
-</>
-)}
-export default ItemDetail;
+    )}
+
+    export default ItemDetail;

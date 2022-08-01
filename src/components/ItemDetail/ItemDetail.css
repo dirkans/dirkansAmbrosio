@@ -1,0 +1,53 @@
+.h2Detail{
+    padding: 10px;
+    
+    margin: 20px;
+}
+.detailedCont{
+    width: 60%;
+    
+    background-color: #B7B6C1;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+
+.detailImg{
+    width: 90%;
+    border-radius: 20px;
+
+}
+
+.info{
+    font-weight: 600;
+    padding-top: 15px;
+    
+    width: 80%;
+}
+
+
+.price{
+    font-weight: 600;
+    
+    
+}
+
+
+.stock{
+    font-weight: 600;
+    
+    
+}
+
+.button{
+    border-radius: 8px;
+    width: 100%;
+
+    
+}

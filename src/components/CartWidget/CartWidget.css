@@ -8,14 +8,16 @@
     
 }
 .cartIconContainer p{
-    color: white;
+    color: #fff;
     padding-right: 5px;
+    
+
 }
 
 
 .cartIcon{
     padding: 5px;
-    height: 50px;
+    height: 40px;
     
     
 

@@ -14,15 +14,14 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-          
           <NavDropdown title="Productos" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#"><Link className="link-down" to='/Products'>Todos los Productos</Link></NavDropdown.Item>
-              <NavDropdown.Item href="#"><Link className="link-down" to='/printers'>Impresoras</Link></NavDropdown.Item>
-              <NavDropdown.Item href="#"><Link className="link-down" to='/filaments'>Filamentos</Link></NavDropdown.Item>
-              <NavDropdown.Item href="#"><Link className="link-down" to='/accesories'>Accesorios</Link></NavDropdown.Item>
-              <NavDropdown.Item href="#"><Link className="link-down" to='/spare'>Repuestos</Link></NavDropdown.Item>
+              <NavDropdown.Item href="#"><Link className="link-down" to='/categories/printers'>Impresoras</Link></NavDropdown.Item>
+              <NavDropdown.Item href="#"><Link className="link-down" to='/categories/filaments'>Filamentos</Link></NavDropdown.Item>
+              <NavDropdown.Item href="#"><Link className="link-down" to='/categories/accesories'>Accesorios</Link></NavDropdown.Item>
+              <NavDropdown.Item href="#"><Link className="link-down" to='/categories/spare'>Repuestos</Link></NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#"><Link className="link-down" to='/printedparts'>Piezas Impresas</Link></NavDropdown.Item>
+              <NavDropdown.Item href="#"><Link className="link-down" to='/categories/printedparts'>Piezas Impresas</Link></NavDropdown.Item>
 </NavDropdown>
           
           

@@ -1,9 +1,8 @@
 import './ItemCount.css';
 import {useState} from 'react';
 import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-import Modal from '../modal/modal';
-const MySwal = withReactContent(Swal);
+
+
 
 const ItemCount = ({title,stock}) =>{
  
@@ -36,9 +35,9 @@ const onAdd = () => {
     return(
         <>
         <div className='countProd'>
-        <button onClick={minusNumber}>-</button>
+        <button className="mpbutton" onClick={minusNumber}>-</button>
         <p>{counter}</p>
-        <button onClick={addNumber}>+</button>
+        <button className="mpbutton" onClick={addNumber}>+</button>
         </div>
         <div>
         <button onClick={onAdd} className="button">Comprar</button>

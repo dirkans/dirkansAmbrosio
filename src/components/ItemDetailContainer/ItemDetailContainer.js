@@ -1,11 +1,10 @@
 import products from "../../utils/products.mock";
 import { useEffect, useState } from "react";
-import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = (props) => {
-        const {quierId} = useParams();
+        const {quierId,category} = useParams();
         const [isLoading,setLoading] = useState(true);
         const [listProducts,setListProducts] = useState([]);
         
@@ -23,7 +22,7 @@ const ItemDetailContainer = (props) => {
 
 
                 useEffect(()=>{
-                        getProducts(2000, products.find(item => item.id === parseInt(quierId)))
+                        getProducts(100, products.find(item => item.id === parseInt(quierId)))
                         .then((res)=>{
                                 setListProducts(res)
                                 setLoading(false)
@@ -41,6 +40,7 @@ const ItemDetailContainer = (props) => {
         return (
 
 <div className="list-products">
+    
       <ItemDetail data={listProducts}></ItemDetail>
       
 </div>

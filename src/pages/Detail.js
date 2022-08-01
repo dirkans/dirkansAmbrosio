@@ -1,11 +1,11 @@
+import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer"
+
 const Detail = (quierId) => {
 return(
 <>
 
+<ItemDetailContainer/>
 
-<p>THIS IS DETAIL</p>
-
-<p>{quierId}</p>
 
 </>
 )

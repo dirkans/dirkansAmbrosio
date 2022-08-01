@@ -1,4 +1,6 @@
 
+
+
 .logoContainer{
     background-color: #666;
     border-radius: 10px;
@@ -6,7 +8,7 @@
 
 .icon{
     padding: 5px;
-    height: 60px;
+    height: 50px;
     
     
 
@@ -15,13 +17,19 @@
  .link{
     color: #FFFFFF8C !important;
     text-decoration: none !important;
+    
+    
 }
 
 .link:hover{
     color:white !important;
+    
 }
+
+
 
 .link-down {
 color: #212529 !important;
 text-decoration: none !important;
+
 }

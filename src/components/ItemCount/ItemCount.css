@@ -16,13 +16,21 @@
 }
 
 .button{
-    border: solid 1px #333;
-    border-radius: 10px;
+    border: none;
+    border-radius: 20px;
     margin: 0 auto;
-    width: 40%;
-    margin-bottom: 15px;
+    width: 10%;
+    margin-bottom: 5px;
     margin-top: 10px;
     margin: 5px;
     }
+
+
+.mpbutton{
+    border: 0px;
+    border-radius: 10px;
+    width: 3%;
+    
+}
     
     

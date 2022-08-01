@@ -1,7 +1,15 @@
-const Products = () => {
-return(
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 
-<p>This is all products</p>
+
+const Products = () => {
+
+    return(
+
+    <ItemListContainer title="Todos nuestros productos"/>
+
+
+
+
 
 )
 
