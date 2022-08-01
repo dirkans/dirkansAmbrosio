@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = (props) => {
-        const {quierId,category} = useParams();
+        const {quierId} = useParams();
         const [isLoading,setLoading] = useState(true);
         const [listProducts,setListProducts] = useState([]);
         

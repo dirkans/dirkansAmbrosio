@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+<!-- 
+    _______   __  .______       __  ___      ___      .__   __.      _______.
+    |       \ |  | |   _  \     |  |/  /     /   \     |  \ |  |     /       |
+    |  .--.  ||  | |  |_)  |    |  '  /     /  ^  \    |   \|  |    |   (----`
+    |  |  |  ||  | |      /     |    <     /  /_\  \   |  . `  |     \   \    
+    |  '--'  ||  | |  |\  \----.|  .  \   /  _____  \  |  |\   | .----)   |   
+    |_______/ |__| | _| `._____||__|\__\ /__/     \__\ |__| \__| |_______/    
+                                                                              
+    http://www.dirkans.com
+    http://linkedin.com/dirkans
+    http://github.com/dirkans
+-->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 3D Printers website
 
-## Available Scripts
+_Este es el sitio web de 3D Printers. Realizado utilizando ReactJS._
 
-In the project directory, you can run:
+## Comenzando 🚀
 
-### `npm start`
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Mira **Deployment** para conocer como desplegar el proyecto.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Pre-requisitos 📋
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_Podemos comenzar clonando el repositorio localmente utilizando git_
 
-### `npm run build`
+```
+git clone https://github.com/dirkans/dirkansAmbrosio
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Instalación 🔧
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_Asegúrate de estar en la carpeta dirkansAmbrosio del proyecto recién clonado_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+cd dirkansAmbrosio
+```
 
-### `npm run eject`
+_Procederemos a instalar los archivos necesarios según el package.json con el siguiente comando:_
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+_Por último inicializamos el servidor local utilizando:_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm start
+```
+_Ahora podremos acceder a la versión clonada desde http://localhost:3000_
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Componentes
 
-## Learn More
+_El sitio consta de los siguientes componentes:_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+Navbar
+```
+_El componente Navbar, es el header donde encontramos el menú desplegable con todos los links a las categorías del sitio. Realizado con Bootstrap. El mismo incorpora el componente "CartWidget"_
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+```
+CartWidget
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+_El componente CartWidget es el logo del carrito de compras y de su lado derecho indica la cantidad de elementos agregados al mismo. Al hacer clic en el mismo nos muestra el carrito de compras completo._
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+Item
+```
 
-### Advanced Configuration
+_El componente Item es la tarjeta individual de cada producto cuando se muestra la cuadrícula con varios productos. El mismo recibe como parámetros titulo, precio y URL de imágen para una vista rápida. Al hacer click sobre dicha tarjeta nos lleva a la vista detallada del producto, utilizando el componente Link de React._
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+ItemCount
+```
 
-### Deployment
+_El componente ItemCount es el encargado de mostrar los botones +, - y agregar producto al carrito, y de calcular el stock disponible y no permitir que se agreguen al carrito mas unidades de las disponibles_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+```
+ItemDetail
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_El componente ItemDetail es el que muestra la vista detallada de cada producto. Además de los parámetros que recibe el componente Item, acá también vemos una descripción larga del mismo, el stock disponible, y la llamada al componente ItemCount, y el boton finalizar compra que nos lleva directamente al carrito._
+
+
+```
+ItemDetailContainer
+```
+
+_El componente ItemDetailContainer recibe la base de datos de productos, y la filtra con el id del producto que se le pasó por medio de useParams, entonces llama a ItemDetail para mostrar la vista detallada de ese ID._
+
+```
+ItemFilteredContainer
+```
+
+_El componente ItemFilteredContainer realiza lo mismo que el anterior, pero filtra por categorías, pero llama a ItemList para mostrar la cuadrícula con todos los productos correspondientes a dicha categoría._
+
+```
+ItemList
+```
+
+_El componente ItemList recibe un listado de productos y utiliando el método map regresa una tarjeta por cada elemento del listado_
+
+```
+ItemListContainer
+```
+
+_El componente ItemListContainer recibe la base de datos con el listado de productos, y se la pasa al componente ItemList para que la muestre en forma de cuadrícula. Proceso sin filtrar, utilizado para "Mostrar todos los productos"._
+
+
+
+## Construido con 🛠️
+
+_Menciona las herramientas que utilizaste para crear tu proyecto_
+
+* [ReactJS](https://github.com/reactjs/reactjs.org) - Framework de desarrollo JavaScript
+* [sweetAlert2](https://sweetalert2.github.io/) - Generador de popups customizables
+* [bootstrap](https://github.com/twbs/bootstrap) - Usado para el menú desplegable del header
+
+
+## Autores ✒️
+
+_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+
+* **Pablo Ambrosio** - *Creador* - [dirkans](https://github.com/dirkans)
+
+
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/dirkans/dirkansAmbrosio/contributors) quíenes han participado en este proyecto. 
