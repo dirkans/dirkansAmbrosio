@@ -19,7 +19,7 @@ _Este es el sitio web de 3D Printers. Realizado utilizando ReactJS._
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+
 
 
 ### Pre-requisitos 📋
@@ -118,7 +118,6 @@ _El componente ItemListContainer recibe la base de datos con el listado de produ
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * [ReactJS](https://github.com/reactjs/reactjs.org) - Framework de desarrollo JavaScript
 * [sweetAlert2](https://sweetalert2.github.io/) - Generador de popups customizables
@@ -126,8 +125,6 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 
 ## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
 * **Pablo Ambrosio** - *Creador* - [dirkans](https://github.com/dirkans)
 
