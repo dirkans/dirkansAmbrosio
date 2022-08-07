@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 
 
 
-const ItemCount = ({title,stock}) =>{
+const ItemCount = ({title,stock,setQty,qty}) =>{
  
 const [counter,setCounter] = useState(1);
 const maxstock = () => {Swal.fire({
@@ -29,18 +29,20 @@ const minusNumber = () => {
         setCounter(counter - 1)}
     }
 const onAdd = () => {
-        added();
+    setQty(counter);
+    added();
     }
 
     return(
         <>
+        
         <div className='countProd'>
         <button className="mpbutton" onClick={minusNumber}>-</button>
         <p>{counter}</p>
         <button className="mpbutton" onClick={addNumber}>+</button>
         </div>
         <div>
-        <button onClick={onAdd} className="button">Comprar</button>
+        <button onClick={onAdd} className="button">Agregar al carrito</button>
         
         </div>
         </>

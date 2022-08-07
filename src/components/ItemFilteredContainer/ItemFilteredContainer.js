@@ -3,12 +3,17 @@ import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 
+
+
 const ItemFilteredContainer = (data) => {
     const {cat} = useParams();
-    console.log("CAT IS: ",cat)
     const [isLoading,setLoading] = useState(true);
     const [listProducts,setListProducts] = useState([]);
     
+    
+
+
+
     let coso = true;
     const getProducts = (time,task) => {
         return new Promise((resolve,reject)=>{
@@ -20,6 +25,8 @@ const ItemFilteredContainer = (data) => {
                 },time);
             });
         }
+
+
 
         useEffect(()=>{
               getProducts(100, products.filter(item => item.category === cat))
