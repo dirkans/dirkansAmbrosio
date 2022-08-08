@@ -1,0 +1,29 @@
+.item-cart img{
+       width: 10%;
+       
+}
+
+
+.item-cart{
+    display: flex;
+    align-items: center;
+}
+
+
+.item-cart p{
+    
+    padding: 20px;
+    display: inline-block;
+    align-items: center;
+    font-weight: 600;
+    width: 80px;
+}
+
+.item-cart button{
+    box-sizing: border-box;
+    height: 30px;
+    
+    display: flex;
+    
+    align-items: center;
+}

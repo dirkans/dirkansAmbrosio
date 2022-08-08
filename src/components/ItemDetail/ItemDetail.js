@@ -2,14 +2,17 @@ import '../ItemCount/ItemCount.css';
 import {Link} from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
-import {useState} from 'react';
+import {useState,useContext,useEffect} from 'react';
+
 
 
 const ItemDetail = ({data}) => {
-    const {title,image,price,stock,info,colors} = data;
+    
+    
+    const {title,image,price,stock,info,colors,id} = data;
 
 const [qty,setQty] = useState(0);
-console.log(qty)
+
 
 return(
 
@@ -20,15 +23,11 @@ return(
             <p className="info">{info}</p>
             <p className="price">$ {price}</p>
             <p className="stock">Stock disponible: {stock} unidades.</p>
-            
             {
-                
-                qty != 0 ? <Link to="/cart"><button className="button">Finalizar Compra</button></Link> : <ItemCount setQty={setQty} qty={qty} title={title} stock={stock} initial="1"/>
+            qty != 0 ? <Link to="/cart"><button  className="button">Finalizar Compra</button></Link> : <ItemCount setQty={setQty} initial="1" productData={data}/>
             }
             
-            
             </div> 
-
-    )}
+)}
 
     export default ItemDetail;

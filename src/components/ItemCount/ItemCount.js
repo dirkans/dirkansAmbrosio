@@ -1,11 +1,14 @@
 import './ItemCount.css';
-import {useState} from 'react';
-import Swal from 'sweetalert2'
+import {useState, useContext} from 'react';
+import Swal from 'sweetalert2';
+import { CartContext } from '../../context/CartContext';
 
 
 
-const ItemCount = ({title,stock,setQty,qty}) =>{
- 
+
+const ItemCount = ({productData,setQty}) =>{
+const {title,image,price,stock,info,colors,id} = productData;
+const {productos,setProductos,addCart} = useContext(CartContext);
 const [counter,setCounter] = useState(1);
 const maxstock = () => {Swal.fire({
     icon: 'error',
@@ -29,8 +32,10 @@ const minusNumber = () => {
         setCounter(counter - 1)}
     }
 const onAdd = () => {
+    
+    addCart(productData,counter)
     setQty(counter);
-    added();
+    // added();
     }
 
     return(

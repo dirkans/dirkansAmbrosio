@@ -15,11 +15,13 @@ import Services from './pages/services'
 import Spare from './pages/spare'
 import Categories from './pages/categories'
 import Detail from './pages/Detail';
+import CartProvider from './context/CartContext';
 
 
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
     <div className="App">
         <NavBar />
@@ -46,6 +48,7 @@ function App() {
 
     </div>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 
