@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import './ItemListContainer.css'
+import Loader from "../Loader/Loader";
 
 const ItemListContainer = (props) => {
 
@@ -30,7 +31,7 @@ const ItemListContainer = (props) => {
 
                 useEffect(()=>{
                        
-                                getProducts(100, products)
+                                getProducts(300, products)
 
                         .then((res)=>{
                                 setListProducts(res)
@@ -43,7 +44,7 @@ const ItemListContainer = (props) => {
                 },[])
 
                 if(isLoading){
-                        return <div>Cargando... Porfavor espere.</div>
+                        return <Loader/>
                 }
 
 

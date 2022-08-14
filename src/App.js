@@ -42,9 +42,7 @@ function App() {
         <Route path="*" element={<h1>ERROR - 404 Sitio no encontrado</h1>}/>
       </Routes>
       </div>
-    <footer>
-      <p className="footer">Dirkans Impresiones 3D®</p>
-    </footer>
+
 
     </div>
     </BrowserRouter>

@@ -2,11 +2,14 @@ import products from "../../utils/products.mock";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import Modal from "../modal/modal";
+import Loader from "../Loader/Loader";
 
 const ItemDetailContainer = (props) => {
         const {quierId} = useParams();
         const [isLoading,setLoading] = useState(true);
         const [listProducts,setListProducts] = useState([]);
+        const [showModal, setShowModal] = useState(false);
         
         let coso = true;
         const getProducts = (time,task) => {
@@ -34,16 +37,21 @@ const ItemDetailContainer = (props) => {
 
                 if(isLoading){
                         return <div>Cargando... Porfavor espere.</div>
-                }
+                } 
 
 
         return (
-
-<div className="list-products">
+                <div className={`list-products ${showModal ? 'overlay-black' : ' '}`}>
     
-      <ItemDetail data={listProducts}></ItemDetail>
-      
-</div>
+
+                        <ItemDetail data={listProducts} openModal={setShowModal}></ItemDetail>
+                       {showModal === true && (
+                               <Modal title="Imagen Producto" close={setShowModal}><img src={`/assets/${listProducts.image}`}/></Modal>
+                               )}
+
+
+                               
+                </div>
 
 )}
 export default ItemDetailContainer;

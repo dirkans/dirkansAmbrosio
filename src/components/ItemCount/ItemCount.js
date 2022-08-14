@@ -35,6 +35,9 @@ const onAdd = () => {
     
     addCart(productData,counter)
     setQty(counter);
+    
+    
+    
     // added();
     }
 

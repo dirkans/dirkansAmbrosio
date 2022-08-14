@@ -8,7 +8,7 @@
     
 }
 .cartIconContainer p{
-    color: #fff;
+    
     padding-right: 5px;
     
 
@@ -19,6 +19,20 @@
     padding: 5px;
     height: 40px;
     
-    
 
+}
+
+.arrow{
+    color: white;
+}
+
+.cantElem{
+    color: white;
+    text-decoration: none;
+        
+}
+
+
+a:link, a:visited, a:active{
+    text-decoration: none;
 }

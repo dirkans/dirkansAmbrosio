@@ -6,7 +6,7 @@ import {useState,useContext,useEffect} from 'react';
 
 
 
-const ItemDetail = ({data}) => {
+const ItemDetail = ({data, openModal}) => {
     
     
     const {title,image,price,stock,info,colors,id} = data;
@@ -19,7 +19,7 @@ return(
     <div className="detailedCont">
         
             <h2 className="h2Detail">{title}</h2>
-            <img className="detailImg"src={`../assets/${image}`} alt="ProductImage"></img>
+            <img className="detailImg"src={`../assets/${image}`} alt="ProductImage" onClick={()=>openModal(true)}></img>
             <p className="info">{info}</p>
             <p className="price">$ {price}</p>
             <p className="stock">Stock disponible: {stock} unidades.</p>
