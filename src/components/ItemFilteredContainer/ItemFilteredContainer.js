@@ -2,42 +2,34 @@ import products from "../../utils/products.mock";
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { collection,getDocs,query,where } from "firebase/firestore";
+import db from "../../firebaseConfig";
 
 
 
 const ItemFilteredContainer = (data) => {
     const {cat} = useParams();
-    const [isLoading,setLoading] = useState(true);
+    const [isLoading,setLoading] = useState(false);
     const [listProducts,setListProducts] = useState([]);
     
     
-
-
-
-    let coso = true;
-    const getProducts = (time,task) => {
-        return new Promise((resolve,reject)=>{
-            setTimeout(()=>{
-                if (coso){
-                    resolve(task)
-                }
-            else{reject("Error")}
-                },time);
-            });
+    
+    
+useEffect(()=>{
+    const q = query(
+        collection(db,"productos"),
+        where("category", "==",cat)
+    );
+    getDocs(q).then((snapshot)=>{
+        if (snapshot.size === 0){
+            console.log("No results");
         }
+        setListProducts(snapshot.docs.map((doc)=>({id: doc.id, ...doc.data()})));
+    });
 
 
+});
 
-        useEffect(()=>{
-              getProducts(100, products.filter(item => item.category === cat))
-                .then((res)=>{
-                        setListProducts(res);
-                        setLoading(false);
-                    })
-                .catch((error)=>{
-                        console.log("La importacion de productos falló")
-                }).finally(()=>{console.log("process ok")})    
-        },)
 
                 if(isLoading){
                         return <div>Cargando... Porfavor espere.</div>

@@ -71,10 +71,5 @@ const products = [
         stock: 1,
         info: 'Réplica a escala 1:500 del RMS Titanic. Impreso en 3D y totalmente pintado a mano con luces leds en su interior.'
         },
-
-
-
-
 ]
-
-    export default products
+export default products
