@@ -1,4 +1,3 @@
-import products from "../../utils/products.mock";
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
@@ -26,7 +25,6 @@ useEffect(()=>{
         }
         setListProducts(snapshot.docs.map((doc)=>({id: doc.id, ...doc.data()})));
     });
-
 
 });
 
