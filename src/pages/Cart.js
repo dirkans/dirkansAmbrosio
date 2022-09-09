@@ -66,11 +66,10 @@ const Cart = () => {
 
     useEffect(()=>{
     
-if(showModal==true){
+if(showModal==true && order==null){
         if (document.getElementById('name').value !== "" && document.getElementById('phone').value !== "" &&  document.getElementById('email2').value !== "" && document.getElementById('email2').value == document.getElementById('email').value){
-        document.getElementById('submit').disabled = false; document.getElementById('errMessage').innerHTML = ""
-    } else {document.getElementById('submit').disabled = true; document.getElementById('errMessage').innerHTML = "Los emails no coinciden"}}
-    
+        document.getElementById('submit').disabled = false; document.getElementById('errMessage').innerHTML = ""}
+     else {document.getElementById('submit').disabled = true; document.getElementById('errMessage').innerHTML = "Los emails no coinciden"}}
 
 
 }
@@ -112,7 +111,7 @@ if(showModal==true){
                 <input id="email" type='email' name='email' placeholder='Ingrese el email' value={formData.email} onChange={handleChange}/>
                 <input id="email2" type='email' name='email2' placeholder='Repita su email' onChange={handleChange}/>
                 
-                <button id="submit" type="submit" disabled="disabled" >Generar pedido!</button>
+                <button id="submit" type="submit" disabled='disabled' >Generar pedido!</button>
                 <p id="errMessage"></p>
                 
             </form> 
