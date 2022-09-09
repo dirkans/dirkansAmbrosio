@@ -62,7 +62,25 @@ const Cart = () => {
 
     }
  
-        
+
+
+    useEffect(()=>{
+    
+if(showModal==true){
+        if (document.getElementById('name').value !== "" && document.getElementById('phone').value !== "" &&  document.getElementById('email2').value !== "" && document.getElementById('email2').value == document.getElementById('email').value){
+        document.getElementById('submit').disabled = false; document.getElementById('errMessage').innerHTML = ""
+    } else {document.getElementById('submit').disabled = true; document.getElementById('errMessage').innerHTML = "Los emails no coinciden"}}
+    
+
+
+}
+    )
+
+
+
+
+
+
 
     return(
         <>
@@ -87,11 +105,16 @@ const Cart = () => {
             <p>El ID de su orden es {okId}</p>
             </>
             ) :
-            <form onSubmit={sendOrder}>
-                <input type='text' name='name' placeholder='Ingrese el nombre' value={formData.name} onChange={handleChange}/>
-                <input type='number' name='phone' placeholder='Ingrese el teléfono' value={formData.phone} onChange={handleChange}/>
-                <input type='email' name='email' placeholder='Ingrese el email' value={formData.email} onChange={handleChange} />
-                <button type="submit">Enviar</button>
+            <form onSubmit={sendOrder} className="form">
+                <p>Porfavor ingrese sus datos para finalizar el pedido</p>
+                <input id="name" type='text' name='name' placeholder='Ingrese el nombre' value={formData.name} onChange={handleChange} required/>
+                <input id="phone" type='number' name='phone' placeholder='Ingrese el teléfono' value={formData.phone} onChange={handleChange} required/>
+                <input id="email" type='email' name='email' placeholder='Ingrese el email' value={formData.email} onChange={handleChange}/>
+                <input id="email2" type='email' name='email2' placeholder='Repita su email' onChange={handleChange}/>
+                
+                <button id="submit" type="submit" disabled="disabled" >Generar pedido!</button>
+                <p id="errMessage"></p>
+                
             </form> 
             }   
             </Modal>}
