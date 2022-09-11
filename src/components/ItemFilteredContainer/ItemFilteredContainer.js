@@ -3,14 +3,14 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { collection,getDocs,query,where } from "firebase/firestore";
 import db from "../../firebaseConfig";
-
+import { Outlet, useLocation } from "react-router-dom";
 
 
 const ItemFilteredContainer = (data) => {
     const {cat} = useParams();
     const [isLoading,setLoading] = useState(false);
     const [listProducts,setListProducts] = useState([]);
-    
+    const location = useLocation();
     
     
     
@@ -25,8 +25,9 @@ useEffect(()=>{
         }
         setListProducts(snapshot.docs.map((doc)=>({id: doc.id, ...doc.data()})));
     });
+    
 
-});
+},[location]);
 
 
                 if(isLoading){

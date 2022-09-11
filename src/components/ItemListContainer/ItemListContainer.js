@@ -26,6 +26,7 @@ useEffect(()=>{
         .then((res) =>{
                 setListProducts(res);
                 setLoading(false);
+                
         })
         .catch((error)=>{
                 console.log("La importacion de productos falló")

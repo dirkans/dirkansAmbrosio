@@ -15,6 +15,9 @@
 
 _Este es el sitio web de 3D Printers. Realizado utilizando ReactJS._
 
+
+![alt text](http://www.dirkans.com/dirkansGif.gif)
+
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._

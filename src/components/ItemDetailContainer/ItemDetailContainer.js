@@ -25,6 +25,7 @@ const ItemDetailContainer = (props) => {
                 .then((res)=>{
                         setListProducts(res)
                         setLoading(false)
+                        
                 })
                 .catch((error)=>{
                         console.log("La importación de productos falló")
